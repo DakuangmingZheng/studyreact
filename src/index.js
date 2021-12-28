@@ -5,6 +5,11 @@ import reportWebVitals from './reportWebVitals';
 import Demo from './components/demo/demo'
 import Demo2 from './components/demo/demo2'
 import OnDemo from './components/demo/onclickdemo'
+import Pdemo from './components/demo/proptypesdemo'
+import Propswith from './components/demo/funcwitchprops'
+import RefComponent from './components/demo/refComponent'
+import FormDemo from './components/demo/formDemo'
+import FormDemo2 from './components/demo/formDemo2'
 let frontBack = [
     "Angular",
     "React",
@@ -12,6 +17,7 @@ let frontBack = [
 ]
 
 let element = frontBack.map((each,index)=> <li key={index}>{each}</li>)
+let p = {isHot: true,wind:true}
 const VDOM = (
     <div>
         <ul>
@@ -19,7 +25,12 @@ const VDOM = (
         </ul>
         <Demo/>
         <Demo2/>
-        <OnDemo/>
+        <OnDemo {...p}/>
+        <Pdemo {...p}/>
+        <Propswith {...p}/>
+        <RefComponent />
+        <FormDemo />
+        <FormDemo2 />
     </div>
 
 )

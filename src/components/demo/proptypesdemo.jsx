@@ -1,14 +1,23 @@
 import React from "react";
+import PropTypes from "prop-types"
 
-export default class OnDemo extends React.Component {
+export default class Pdemo extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {isHot:true,wind:true}
+        this.state = {isHot: true, wind: true}
     }
+
+    static propTypes = {
+        temperature: PropTypes.number
+    }
+    static defaultProps = {
+        temperature: 30
+    }
+
     render() {
         const {temperature} = this.props
-        const {isHot,wind} = this.state
+        const {isHot, wind} = this.state
         return (
             <div>
                 <h1 onClick={this.changeWeather}>
@@ -23,7 +32,8 @@ export default class OnDemo extends React.Component {
         this.setState({
             isHot: !this.state.isHot,
             wind: !this.state.wind,
-            temperature:this.state.temperature+1
+            temperature: this.state.temperature + 1
         })
     }
 }
+
