@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Demo from './components/demo/demo'
 import Demo2 from './components/demo/demo2'
+import OnDemo from './components/demo/onclickdemo'
 let frontBack = [
     "Angular",
     "React",
@@ -18,6 +19,7 @@ const VDOM = (
         </ul>
         <Demo/>
         <Demo2/>
+        <OnDemo/>
     </div>
 
 )
