@@ -10,6 +10,7 @@ import Propswith from './components/demo/funcwitchprops'
 import RefComponent from './components/demo/refComponent'
 import FormDemo from './components/demo/formDemo'
 import FormDemo2 from './components/demo/formDemo2'
+import Life from './components/demo/life'
 let frontBack = [
     "Angular",
     "React",
@@ -18,6 +19,7 @@ let frontBack = [
 
 let element = frontBack.map((each,index)=> <li key={index}>{each}</li>)
 let p = {isHot: true,wind:true}
+let node = {node:document.getElementById('root')}
 const VDOM = (
     <div>
         <ul>
@@ -31,6 +33,7 @@ const VDOM = (
         <RefComponent />
         <FormDemo />
         <FormDemo2 />
+        <Life {...node}/>
     </div>
 
 )
