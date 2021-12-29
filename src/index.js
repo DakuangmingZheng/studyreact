@@ -11,6 +11,7 @@ import RefComponent from './components/demo/refComponent'
 import FormDemo from './components/demo/formDemo'
 import FormDemo2 from './components/demo/formDemo2'
 import Life from './components/demo/life'
+import Scroll from './components/demo/scroll'
 let frontBack = [
     "Angular",
     "React",
@@ -22,6 +23,7 @@ let p = {isHot: true,wind:true}
 let node = {node:document.getElementById('root')}
 const VDOM = (
     <div>
+        <Scroll/>
         <ul>
             {element}
         </ul>
