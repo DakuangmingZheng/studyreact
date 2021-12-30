@@ -1,46 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App'
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Demo from './components/demo/demo'
-import Demo2 from './components/demo/demo2'
-import OnDemo from './components/demo/onclickdemo'
-import Pdemo from './components/demo/proptypesdemo'
-import Propswith from './components/demo/funcwitchprops'
-import RefComponent from './components/demo/refComponent'
-import FormDemo from './components/demo/formDemo'
-import FormDemo2 from './components/demo/formDemo2'
-import Life from './components/demo/life'
-import Scroll from './components/demo/scroll'
-let frontBack = [
-    "Angular",
-    "React",
-    "Vue"
-]
 
-let element = frontBack.map((each,index)=> <li key={index}>{each}</li>)
-let p = {isHot: true,wind:true}
-let node = {node:document.getElementById('root')}
-const VDOM = (
-    <div>
-        <Scroll/>
-        <ul>
-            {element}
-        </ul>
-        <Demo/>
-        <Demo2/>
-        <OnDemo {...p}/>
-        <Pdemo {...p}/>
-        <Propswith {...p}/>
-        <RefComponent />
-        <FormDemo />
-        <FormDemo2 />
-        <Life {...node}/>
-    </div>
 
-)
+
 ReactDOM.render(
-  VDOM,
+  <App/>,
   document.getElementById('root')
 );
 
